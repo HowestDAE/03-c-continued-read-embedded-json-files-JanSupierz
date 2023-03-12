@@ -1,0 +1,22 @@
+[
+  {
+    "slug": "hero",
+    "id": 3,
+    "class": "HeroCard"
+  },
+  {
+    "slug": "minion",
+    "id": 4,
+    "class": "MinionCard"
+  },
+  {
+    "slug": "spell",
+    "id": 5,
+    "class": "SpellCard"
+  },
+  {
+    "slug": "weapon",
+    "id": 7,
+    "class": "WeaponCard"
+  }
+]

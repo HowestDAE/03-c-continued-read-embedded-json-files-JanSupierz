@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L03_HearthStone.LIB", "L03_HearthStone.LIB\L03_HearthStone.LIB.csproj", "{02E9DC3E-7E86-4980-A85A-E5ACC5D7A0D5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{02E9DC3E-7E86-4980-A85A-E5ACC5D7A0D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02E9DC3E-7E86-4980-A85A-E5ACC5D7A0D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02E9DC3E-7E86-4980-A85A-E5ACC5D7A0D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02E9DC3E-7E86-4980-A85A-E5ACC5D7A0D5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7D8E6C23-EA19-4296-8260-E8CC30CEF324}
+	EndGlobalSection
+EndGlobal
