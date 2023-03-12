@@ -5,23 +5,50 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EX01_HearthStone.WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="1200">
+        Title="MainWindow" Height="800" Width="1100" >
     <Grid Background="Beige">
-        <ListBox x:Name="lstCards" Background="Beige">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Height="300" Width="auto">
-                        <TextBlock>
-                            <Run Text="{Binding DisplayName}"/>
-                            <Run Text=" - "/>
-                            <Run Text="costs "/>
-                            <Run Text="{Binding ManaCost}"/>
-                            <Run Text=" mana"/>
-                        </TextBlock>
-                        <Image Source="{Binding Image}"/>
-                    </StackPanel>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
+        <ListBox x:Name="lstCards" Background="Beige" SelectionChanged="lstCards_SelectionChanged" Width="Auto" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel Orientation="Horizontal" Width="Auto">
+                        </WrapPanel>
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Height="200" Width="140" VerticalAlignment="Top" HorizontalAlignment="Left" >
+                            
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="12"/>
+                            <RowDefinition Height="108"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="55"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+
+
+                        <Image Source="{Binding Image}" Grid.ColumnSpan="3" Grid.RowSpan="5" Grid.Row="0" Grid.Column="0"/>
+                        <TextBlock Text="{Binding DisplayName}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" FontSize="12" 
+                                   Foreground="White" FontWeight="Bold" 
+                                   VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                        <TextBlock Text="{Binding ManaCost}" Grid.Column="0" Grid.Row="1" 
+                                   VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="White" 
+                                   FontSize="30" FontWeight="Bold"/>
+                        <TextBlock Text="{Binding Text}" Grid.Row="3" VerticalAlignment="Top" Grid.Column="1" 
+                                   Width="auto" HorizontalAlignment="Left" TextWrapping="Wrap" FontSize="10"/>
+                        <TextBlock Text="{Binding Attack}" Grid.Column="0" Grid.Row="3" Grid.RowSpan="2" 
+                                   VerticalAlignment="Bottom" HorizontalAlignment="Center" Foreground="White" 
+                                   FontSize="30" FontWeight="Bold"/>
+
+                    </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
     </Grid>
 </Window>

@@ -36,6 +36,8 @@ namespace L03_HearthStone.LIB
     }
     public class MinionCard : BaseCard
     {
+        public string Attack { get; set; }
+
         public override BitmapImage Image
         {
             get
