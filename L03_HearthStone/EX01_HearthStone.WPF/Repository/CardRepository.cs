@@ -50,7 +50,20 @@ namespace EX01_HearthStone.WPF.Repository
             //Read only once
             string json = File.ReadAllText("../../Resources/DataFiles/cards.json");
 
-            _cards = JToken.Parse(json).SelectToken("cards").ToObject<List<BaseCard>>();
+            List<JObject> jCards = JToken.Parse(json).SelectToken("cards").ToObject<List<JObject>>();
+
+            _cards = new List<BaseCard>();
+
+            foreach(JObject jCard in jCards) 
+            {
+                int typeId = jCard.Value<int>("cardTypeId");
+
+                CardType cardType = GetCardType(typeId);
+
+                BaseCard card = (BaseCard)jCard.ToObject(cardType.ActualType);
+                _cards.Add(card);
+            }
+
             return _cards;
         }
     }

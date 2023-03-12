@@ -5,18 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EX01_HearthStone.WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <ListBox x:Name="lstCards">
+        Title="MainWindow" Height="800" Width="1200">
+    <Grid Background="Beige">
+        <ListBox x:Name="lstCards" Background="Beige">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <TextBlock>
-                        <Run Text="{Binding DisplayName}"/>
-                        <Run Text=" - "/>
-                        <Run Text="costs "/>
-                        <Run Text="{Binding ManaCost}"/>
-                        <Run Text=" mana"/>
-                    </TextBlock> 
+                    <StackPanel Height="300" Width="auto">
+                        <TextBlock>
+                            <Run Text="{Binding DisplayName}"/>
+                            <Run Text=" - "/>
+                            <Run Text="costs "/>
+                            <Run Text="{Binding ManaCost}"/>
+                            <Run Text=" mana"/>
+                        </TextBlock>
+                        <Image Source="{Binding Image}"/>
+                    </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
