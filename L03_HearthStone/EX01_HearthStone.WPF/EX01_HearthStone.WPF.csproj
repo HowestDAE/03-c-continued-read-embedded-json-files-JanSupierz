@@ -58,6 +58,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Repository\CardRepository.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -94,9 +95,23 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="Resources\DataFiles\cards.json" />
+    <None Include="Resources\DataFiles\cardtypes.json" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\L03_HearthStone.LIB\L03_HearthStone.LIB.csproj">
+      <Project>{02e9dc3e-7e86-4980-a85a-e5acc5d7a0d5}</Project>
+      <Name>L03_HearthStone.LIB</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\DataFiles\cardtypes\card minion.png" />
+    <Resource Include="Resources\DataFiles\cardtypes\herocard.png" />
+    <Resource Include="Resources\DataFiles\cardtypes\spell.png" />
+    <Resource Include="Resources\DataFiles\cardtypes\weaponcard.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

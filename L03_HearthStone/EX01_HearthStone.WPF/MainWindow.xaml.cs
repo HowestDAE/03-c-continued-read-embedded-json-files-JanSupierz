@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EX01_HearthStone.WPF.Repository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,8 @@ namespace EX01_HearthStone.WPF
         public MainWindow()
         {
             InitializeComponent();
+            var list = CardRepository.GetCardTypes();
+            var obj = CardRepository.GetCardType(1);
         }
     }
 }

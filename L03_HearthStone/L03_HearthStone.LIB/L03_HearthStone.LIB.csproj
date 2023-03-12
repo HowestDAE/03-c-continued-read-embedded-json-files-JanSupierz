@@ -49,12 +49,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EX01_HearthStone.WPF\EX01_HearthStone.WPF.csproj">
-      <Project>{579e46ed-beb0-436b-8bd1-1b77dfd013a8}</Project>
-      <Name>EX01_HearthStone.WPF</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
