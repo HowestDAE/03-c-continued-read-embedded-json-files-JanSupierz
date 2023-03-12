@@ -8,7 +8,17 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <ListBox x:Name="lstCards">
-            
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock>
+                        <Run Text="{Binding DisplayName}"/>
+                        <Run Text=" - "/>
+                        <Run Text="costs "/>
+                        <Run Text="{Binding ManaCost}"/>
+                        <Run Text=" mana"/>
+                    </TextBlock> 
+                </DataTemplate>
+            </ListBox.ItemTemplate>
         </ListBox>
     </Grid>
 </Window>

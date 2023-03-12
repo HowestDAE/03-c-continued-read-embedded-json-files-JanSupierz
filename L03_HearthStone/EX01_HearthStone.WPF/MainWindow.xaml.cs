@@ -24,8 +24,13 @@ namespace EX01_HearthStone.WPF
         public MainWindow()
         {
             InitializeComponent();
-            var list = CardRepository.GetCardTypes();
-            var obj = CardRepository.GetCardType(1);
+
+            var types = CardRepository.GetCardTypes();
+            var type = CardRepository.GetCardType(5);
+
+            var cards = CardRepository.GetCards();
+
+            lstCards.ItemsSource = cards;
         }
     }
 }
