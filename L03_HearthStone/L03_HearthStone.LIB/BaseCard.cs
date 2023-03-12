@@ -34,9 +34,18 @@ namespace L03_HearthStone.LIB
 
         public abstract BitmapImage Image { get; }
     }
-    public class MinionCard : BaseCard
+
+    interface IHasLifeSpan
     {
-        public string Attack { get; set; }
+        int LifesLeft { get; }
+    }
+
+
+    public class MinionCard : BaseCard, IHasLifeSpan
+    {
+        public int Attack { get; set; }
+
+        public int Health { get; set; }
 
         public override BitmapImage Image
         {
@@ -46,10 +55,17 @@ namespace L03_HearthStone.LIB
                 new Uri($"pack://application:,,,/Resources/DataFiles/cardtypes/card minion.png", UriKind.Absolute));
             }
         }
+
+        public int LifesLeft
+        {
+            get { return Health; }
+        }
     }
 
-    public class HeroCard : BaseCard
+    public class HeroCard : BaseCard, IHasLifeSpan
     {
+        public int Health { get; set; }
+
         public override BitmapImage Image
         {
             get
@@ -58,6 +74,11 @@ namespace L03_HearthStone.LIB
                 new Uri($"pack://application:,,,/Resources/DataFiles/cardtypes/herocard.png", UriKind.Absolute));
 
             }
+        }
+
+        public int LifesLeft
+        {
+            get { return Health; }
         }
     }
 
@@ -73,8 +94,10 @@ namespace L03_HearthStone.LIB
         }
     }
 
-    public class WeaponCard : BaseCard
+    public class WeaponCard : BaseCard, IHasLifeSpan
     {
+        int Durability { get; set; }
+
         public override BitmapImage Image
         {
             get
@@ -82,6 +105,11 @@ namespace L03_HearthStone.LIB
                 return new BitmapImage(
                 new Uri($"pack://application:,,,/Resources/DataFiles/cardtypes/weaponcard.png", UriKind.Absolute));
             }
+        }
+
+        public int LifesLeft
+        {
+            get { return Durability; }
         }
     }
 
