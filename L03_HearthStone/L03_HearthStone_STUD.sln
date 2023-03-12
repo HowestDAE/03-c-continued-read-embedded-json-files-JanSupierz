@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30907.101
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33414.496
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L03_HearthStone.LIB", "L03_HearthStone.LIB\L03_HearthStone.LIB.csproj", "{02E9DC3E-7E86-4980-A85A-E5ACC5D7A0D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EX01_HearthStone.WPF", "EX01_HearthStone.WPF\EX01_HearthStone.WPF.csproj", "{579E46ED-BEB0-436B-8BD1-1B77DFD013A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{02E9DC3E-7E86-4980-A85A-E5ACC5D7A0D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02E9DC3E-7E86-4980-A85A-E5ACC5D7A0D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02E9DC3E-7E86-4980-A85A-E5ACC5D7A0D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{579E46ED-BEB0-436B-8BD1-1B77DFD013A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{579E46ED-BEB0-436B-8BD1-1B77DFD013A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{579E46ED-BEB0-436B-8BD1-1B77DFD013A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{579E46ED-BEB0-436B-8BD1-1B77DFD013A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
